@@ -7,7 +7,12 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
-        mavenCentral()
+        mavenCentral() {
+            content {
+                includeGroup("com.google.dagger")
+                includeGroup("com.google.dagger.hilt.android")
+            }
+        }
         gradlePluginPortal()
     }
 }
@@ -24,3 +29,5 @@ include(":app")
 include(":core:model")
 include(":feature:userlist")
 include(":feature:userdetails")
+include(":core:network")
+include(":core:data:")

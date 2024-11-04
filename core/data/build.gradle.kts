@@ -1,10 +1,11 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
-    namespace = "com.me.githubmanager.core.model"
+    namespace = "com.me.githubmanager.code.data"
     compileSdk = 34
 
     defaultConfig {
@@ -34,8 +35,13 @@ android {
 
 dependencies {
 
-    // Json Parsing modules
-    implementation(libs.moshi)
+    // Core models
+    implementation(project(":core:model"))
+    implementation(project(":core:network"))
+
+    // Dependency Injection modules
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
