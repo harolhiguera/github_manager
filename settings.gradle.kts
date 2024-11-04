@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "GithubManager"
 include(":app")
+include(":core:model")
+include(":feature:userlist")
+include(":feature:userdetails")
