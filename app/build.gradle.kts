@@ -40,6 +40,12 @@ android {
 }
 
 dependencies {
+    // Core models
+    implementation(project(":core:model"))
+
+    // Feature modules
+    implementation(project(":feature:userlist"))
+    implementation(project(":feature:userdetails"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

@@ -1,4 +1,4 @@
-package com.me.githubmanager.ui
+package com.me.githubmanager
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
